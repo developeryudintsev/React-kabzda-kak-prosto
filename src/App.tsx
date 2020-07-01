@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-// import OnOff from "./components/OnOff/OnOff";
+import OnOff from "./components/OnOff/OnOff";
 import {Rating} from "./components/Rating/Rating";
 // import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 // import SelfControlledAccordion from "./components/SelfControlledAccordion/SelfControlledAccordion";
@@ -9,9 +9,9 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     return (
         <div>
-            {/*<OnOff/>*/}
-            {/*<OnOff/>*/}
-            {/*<OnOff/>*/}
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
             {/*<SelfControlledAccordion titleValue={'Menu'}/>*/}
             {/*<SelfControlledAccordion titleValue={'Users'}/>*/}
             {/*<UnControlledRating value={0}/>*/}
