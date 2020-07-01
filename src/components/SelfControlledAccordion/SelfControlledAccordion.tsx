@@ -5,14 +5,14 @@ type AccordionType = {
 }
 
 function SelfControlledAccordion(props: AccordionType) {
-    let [collapsed,setCollapsed]=useState(false);
-
-    return (
-        <div>
-            <AccordionTitle title={props.titleValue}/> <button onClick={()=>{setCollapsed(!collapsed)}}>OPEN/CLOSE</button>
-            {collapsed &&<AccordionBody/>}
-        </div>
-    )
+let [open,setOpen]=useState();
+return(
+    <div>
+        <AccordionTitle title={props.titleValue}/>
+        <button onClick={()=>{setOpen(!open)}}>close/open</button>
+        {open &&<AccordionBody/>}
+    </div>
+)
 }
 
 type AccordionTitleType = {
@@ -22,7 +22,7 @@ type AccordionTitleType = {
 const AccordionTitle = function (props: AccordionTitleType) {
     return (
         <div>
-       <h3>{props.title}</h3>
+            <h3>{props.title}</h3>
         </div>
     )
 }
@@ -39,3 +39,46 @@ const AccordionBody = () => {
 
 
 export default SelfControlledAccordion;
+
+//=====================================================
+// import React, {useState} from "react";
+//
+// type AccordionType = {
+//     titleValue: string;
+// }
+//
+// function SelfControlledAccordion(props: AccordionType) {
+//     let [collapsed,setCollapsed]=useState(false);
+//
+//     return (
+//         <div>
+//             <AccordionTitle title={props.titleValue}/> <button onClick={()=>{setCollapsed(!collapsed)}}>OPEN/CLOSE</button>
+//             {collapsed &&<AccordionBody/>}
+//         </div>
+//     )
+// }
+//
+// type AccordionTitleType = {
+//     title: string;
+// }
+//
+// const AccordionTitle = function (props: AccordionTitleType) {
+//     return (
+//         <div>
+//             <h3>{props.title}</h3>
+//         </div>
+//     )
+// }
+//
+// const AccordionBody = () => {
+//     return (
+//         <ul>
+//             <li>1</li>
+//             <li>2</li>
+//             <li>3</li>
+//         </ul>
+//     )
+// }
+//
+//
+// export default SelfControlledAccordion;
